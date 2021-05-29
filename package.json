@@ -1,0 +1,24 @@
+{
+  "name": "project-venus",
+  "version": "1.0.0",
+  "description": "The Twitch Bots",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "tmi.js": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onetimefixation/twitchbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onetimefixation/twitchbot/issues"
+  },
+  "homepage": "https://github.com/onetimefixation/twitchbot#readme"
+}
