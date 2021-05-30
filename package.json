@@ -1,9 +1,11 @@
 {
   "name": "project-venus",
   "version": "1.0.0",
+  "type": "module",
   "description": "The Twitch Bots",
   "main": "app.js",
   "dependencies": {
+    "config": "^3.3.6",
     "dotenv": "^10.0.0",
     "tmi.js": "^1.8.3"
   },
