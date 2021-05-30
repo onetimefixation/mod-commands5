@@ -2,10 +2,27 @@
 These commands are developed for a targetted Twitch site.  It is meant to assist in moderating CHAT, as well as making CHAT more engaging to the visitors.
 Anyone using this code assumes full responsibility for its behavior and outcomes.
 
+There are two methods from running these commands:
+    1) Diectly from a user's computer - if this is the chosen method, 
+        a) follow the steps (1-6) under INSTALLING must be performed.  
+        b) there must be a TERMINAL WINDOW dedicated to running the application
+        c) the application must be physically started before and stopped after the stream
+
+    2) Run as a hosted application (this is the preferred method):
+        a) create BOT user and give it MOD priveledges
+        b) "git push" the required files to GIT HUB and HEROKU
+        c) start the HEROKU process with the provided credentials
+        d) set the credentials as necessary
+        e) this will be a persistant process and therefore no need to start and stop it for the streams
+
+
+
+## METHOD 1
+
 1) !startpred n
 
-        This command starts a predition countdown timer.  When a MOD enters this command, an immediate message is displayed in chat advising that a prediction
-        has started and the numner of minutes left.
+        This command starts a predition countdown timer.  When a MOD enters this command, an immediate message is
+        displayed in chat advising that a prediction has started and the numner of minutes left.
         Once the timer reaches 1 minute a message is displayed each 15 seconds until the timer reaches zero (0), at which time and ending message is displayed
 
         The !startpred command must be followed by a valid integer between 1 and 15 to indicate the time.  Any other entries are ignored and a timer is not
@@ -84,12 +101,34 @@ A BOT user with MOD capabilities
 node app.js
 
 
+## METHOD 2
+
+    1) create a user on TWITCH and give it MOD permissions (this will be the BOT that dispalys the messages to the screen)
+    2) Get oAuth code from https://twitchapps.com/tmi/
+        (save the code in a safe place)
+                and then
+       create a .env file on the directory
+
+
+       add the oAuth code to the .env file in the directory.  The three entries in the this file should look something like this:
+
+                                CHANNEL_NAME = <yourChannelName>
+                                OAUTH_TOKEN  = <the oAuth code you just received>
+                                BOT_USERNAME = <theBotUserName>
+
+    3) clone and push the files to github and HEROKU 
+    4) start the HEROKU Dyno process (make sure it is a "WORKER")
+    5) check the HEROKU logs to make sure it is running
+
+
+
 
 ## Built With
 
 * Java Script app.js (contains site logic)
 * NodeJS (js engine)
 * TMI.js (Twitch API)
+* Heroku (content hosting)
 
 ## Known Issues
 
