@@ -1,10 +1,13 @@
 
+// VERSION 2.1
+
+
 export function startpred(client, tags, channel, predictionTime){
 
+//console.log(tags);
 
     // only accept messages from valid people
-    if (tags.mod === false){
-
+    if (tags.mod !== true) {
            return;
         }    
 
@@ -58,14 +61,13 @@ export function startpred(client, tags, channel, predictionTime){
                for (var i = 0; i < 2; i++) {
                    strOutput.push(+strTimeLeft.charAt(i));
                }
-   
-               if (predictionTime !== 1) {
-                   client.say(channel,`P R E D I C T I O N`);
-                   client.say(channel, `**** Voting ******`);
-               }
+
+                client.say(channel,`P R E D I C T I O N`);
+                client.say(channel,`**  V O T I N G  **`);
+               
                
                if (strOutput[0] && strOutput[1] !== 1){
-                   client.say(channel,`*** ${strOutput[0]}${strOutput[1]} Secs Left ***`);
+                   client.say(channel,`** ${strOutput[0]}${strOutput[1]} Secs Left ***`);
                    }
                  else {
                    if (timeLeft <= 0) {
