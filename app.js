@@ -1,3 +1,7 @@
+// VERSION
+// Added !startpoll 060321
+
+
 //    REQUIRES DO NOT WORK BECAUSE THE JASON TYPE IS MODULE 
 // require('dotenv').config();
 //const tmi = require('tmi.js');
@@ -6,6 +10,7 @@
 
 import dotenv from 'dotenv';
 import {startpred} from './predtimer.js';
+import {startpoll} from './predpoll.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
@@ -32,8 +37,10 @@ switch (parsedMessage[0].toLowerCase()){
   case '!startpred':
     startpred(client, tags, channel, parsedMessage[1]);
     break;
-
-    default:
+  case '!startpoll':
+    startpoll(client, tags, channel, parsedMessage[1]);
+    break;
+  default:
     break;
   }
 });
