@@ -11,6 +11,7 @@
 import dotenv from 'dotenv';
 import {startpred} from './predtimer.js';
 import {startpoll} from './predpoll.js';
+import {schedule} from './schedule.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
@@ -39,6 +40,9 @@ switch (parsedMessage[0].toLowerCase()){
     break;
   case '!startpoll':
     startpoll(client, tags, channel, parsedMessage[1]);
+    break;
+  case '!schedule':
+    schedule(client, tags, channel, parsedMessage[1]);
     break;
   default:
     break;

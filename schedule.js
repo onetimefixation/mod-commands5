@@ -40,39 +40,87 @@ const months = [
   ]
 
   const days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thusday',
-    'Friday',
-    'Saturday'
+    'Sun',
+    'Mon',
+    'Tues',
+    'Wed',
+    'Thur',
+    'Fri',
+    'Sat'
   ]
 
 const monthName = months[mm];
 
-// parse out the mm and day
+
+function  currentStreamStarted (countDownDate){
+        // Set the date we're counting down to
+        var countDownDate = new Date(countDownDate).getTime();
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        if (distance < 0 ){
+            return (true);
+         }
+         else {
+             return (false);
+         }
+
+
+}
 
 switch (day){
 case 0:{ 
     // Sun
-    nextStreamDay = 1;
-    const daysTillNextStream = 1;
+
+   
+    //nextStreamDay = 1;
+    var daysTillNextStream = 1;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
-   
+
+
+    //first format the argument that is sent to calculate if the stream has started
+    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    //set the appropriate date for the next stream
+    if (!currentStreamStarted(countDownDateArg)){
+        daysTillNextStream = 1; //Today
+        // maybe chance dayName
+    }
+    else {
+        daysTillNextStream = 2; //Tomorrow
+
+        // maybe chance dayName
+    }
+
+        const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
 }
 case 1:{
     // Mon
-    nextStreamDay = 2;
-    const daysTillNextStream = 1;
+    //nextStreamDay = 2;
+    var daysTillNextStream = 1;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
+
+    //first format the argument that is sent to calculate if the stream has started
+    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    //set the appropriate date for the next stream
+    if (!currentStreamStarted(countDownDateArg)){
+        daysTillNextStream = 1; //Today
+    }
+    else {
+        daysTillNextStream = 2; //Tomorrow
+    }
+
+    
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
    
     showTimeDiff(nextStreamFormatted, dayName);
 
@@ -80,11 +128,22 @@ case 1:{
 }
 case 2:{
     // Tues
-    nextStreamDay = 3;
-    const daysTillNextStream = 1;
+    //nextStreamDay = 3;
+    var daysTillNextStream = 1;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
+
+    //first format the argument that is sent to calculate if the stream has started
+    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    //set the appropriate date for the next stream
+    if (!currentStreamStarted(countDownDateArg)){
+        daysTillNextStream = 1; //Today
+    }
+    else {
+        daysTillNextStream = 2; //Tomorrow
+    }
+
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
    
     showTimeDiff(nextStreamFormatted, dayName);
 
@@ -92,11 +151,24 @@ case 2:{
 }
 case 3:{
     // Wed
-    nextStreamDay = 4;
-    const daysTillNextStream = 1;
+    //nextStreamDay = 4;
+    var daysTillNextStream = 1;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
+
+    //first format the argument that is sent to calculate if the stream has started
+    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    //set the appropriate date for the next stream
+    if (!currentStreamStarted(countDownDateArg)){
+        daysTillNextStream = 1; //Today
+    }
+    else {
+        daysTillNextStream = 2; //Tomorrow
+    }
+
+
+
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
    
     showTimeDiff(nextStreamFormatted, dayName);
 
@@ -104,22 +176,34 @@ case 3:{
 }
 case 4:{
     // Thurs
-    nextStreamDay = 1;
-    const daysTillNextStream = 4;
+    //nextStreamDay = 1;
+    var daysTillNextStream = 4;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
+
+    //first format the argument that is sent to calculate if the stream has started
+    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    //set the appropriate date for the next stream
+    if (!currentStreamStarted(countDownDateArg)){
+        daysTillNextStream = 1; //Today
+    }
+    else {
+        daysTillNextStream = 4; //Tomorrow
+    }
+
+
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
    
     showTimeDiff(nextStreamFormatted, dayName);
     break;
 }
 case 5:{
     // Fri
-    nextStreamDay = 1;
-    const daysTillNextStream = 3;
+    //nextStreamDay = 1;
+    var daysTillNextStream = 3;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
    
     showTimeDiff(nextStreamFormatted, dayName);
     break;
@@ -127,11 +211,11 @@ case 5:{
 case 6:{
     // Sat
     
-    nextStreamDay = 1;
-    const daysTillNextStream = 2;
+    //nextStreamDay = 1;
+    var daysTillNextStream = 2;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 17:00:00`;
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
    
     showTimeDiff(nextStreamFormatted, dayName);
 
@@ -159,24 +243,23 @@ function showTimeDiff(nextStream, dayNameParam){
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result        
-        const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 17:00:00 Eastern`;
-        
+        const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
-        client.say(channel, "Rinoa's Next Stream will take place in:")
+        client.say(channel, "NEXT STREAM TAKES PLACE IN:")
         client.say(channel, `${days} Day ${hours} Hours ${minutes} Mins ${seconds} Secs`);
         client.say(channel, nextStreamDay);
-        client.say(channel, "Normal Streaming Time is:");
-        client.say(channel, "Mon - Thurs 17:00 - 19:00 Eastern - except holidays");
+        client.say(channel, "NORMAL STREAMING HOURS ARE:");
+        client.say(channel, "Mon-Thurs 4:30 - 7:30 PM EST - except holidays");
         client.say(channel, "------------------------------------");
 
-/*         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 17:00:00 Eastern`;
+        //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
         console.log("------------------------------------")
-        console.log("Rinoa's Next Stream will take place in:")
+        console.log("Next Stream will take place in:")
         console.log(`${days} Day ${hours} Hours ${minutes} Mins ${seconds} Secs`);
         console.log(nextStreamDay);
-        console.log("Normal Streaming Time is:");
-        console.log("Mon - Thurs 17:00 - 19:00 Eastern - except holidays")
-        console.log("------------------------------------") */
+        console.log("NORMAL STREAMING HOURS ARE:");
+        console.log("Mon-Thurs 4:30 - 7:30 PM EST - except holidays")
+        console.log("------------------------------------") 
 
 
 
