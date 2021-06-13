@@ -247,16 +247,16 @@ function showTimeDiff(nextStream, dayNameParam){
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result        
-/*         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
+        const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
         client.say(channel, `${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         client.say(channel, nextStreamDay);
         client.say(channel, "NORMAL STREAMING HOURS ARE:");
         client.say(channel, "Mon-Thurs 4:30 - 7:30 PM EST - except holidays");
-        client.say(channel, "------------------------------------"); */
+        client.say(channel, "------------------------------------"); 
 
-        const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
+        //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
         console.log("------------------------------------")
         console.log("Next Stream will take place in:")
         console.log(`${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
