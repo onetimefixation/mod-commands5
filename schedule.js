@@ -226,6 +226,10 @@ default:
 }
 
 
+/* For the time being we are not displaying the date of the next stream 
+until the logic is worked out */
+
+
 function showTimeDiff(nextStream, dayNameParam){
         // Set the date we're counting down to
         var countDownDate = new Date(nextStream).getTime();
@@ -247,7 +251,7 @@ function showTimeDiff(nextStream, dayNameParam){
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
         client.say(channel, `${days} Day ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
-        client.say(channel, nextStreamDay);
+        // client.say(channel, nextStreamDay);
         client.say(channel, "NORMAL STREAMING HOURS ARE:");
         client.say(channel, "Mon-Thurs 4:30 - 7:30 PM EST - except holidays");
         client.say(channel, "------------------------------------");
@@ -256,7 +260,7 @@ function showTimeDiff(nextStream, dayNameParam){
         console.log("------------------------------------")
         console.log("Next Stream will take place in:")
         console.log(`${days} Day ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
-        console.log(nextStreamDay);
+        // console.log(nextStreamDay);
         console.log("NORMAL STREAMING HOURS ARE:");
         console.log("Mon-Thurs 4:30 - 7:30 PM EST - except holidays")
         console.log("------------------------------------") 
