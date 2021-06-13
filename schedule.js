@@ -229,7 +229,7 @@ default:
 function showTimeDiff(nextStream, dayNameParam){
         // Set the date we're counting down to
         var countDownDate = new Date(nextStream).getTime();
-
+        const herokuTimeOffset = 4;
         // Get today's date and time
         var now = new Date().getTime();
 
@@ -246,7 +246,7 @@ function showTimeDiff(nextStream, dayNameParam){
         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
-        client.say(channel, `${days} Day ${hours} Hours ${minutes} Mins ${seconds} Secs`);
+        client.say(channel, `${days} Day ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         client.say(channel, nextStreamDay);
         client.say(channel, "NORMAL STREAMING HOURS ARE:");
         client.say(channel, "Mon-Thurs 4:30 - 7:30 PM EST - except holidays");
@@ -255,7 +255,7 @@ function showTimeDiff(nextStream, dayNameParam){
         //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
         console.log("------------------------------------")
         console.log("Next Stream will take place in:")
-        console.log(`${days} Day ${hours} Hours ${minutes} Mins ${seconds} Secs`);
+        console.log(`${days} Day ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         console.log(nextStreamDay);
         console.log("NORMAL STREAMING HOURS ARE:");
         console.log("Mon-Thurs 4:30 - 7:30 PM EST - except holidays")
