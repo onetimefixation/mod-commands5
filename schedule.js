@@ -83,15 +83,19 @@ case 0:{
     const nextDate = new Date();
 
 
+
+
+
+
     //first format the argument that is sent to calculate if the stream has started
     const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
     //set the appropriate date for the next stream
     if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 1; //Today
+        daysTillNextStream = 0; //Today
         // maybe chance dayName
     }
     else {
-        daysTillNextStream = 2; //Tomorrow
+        daysTillNextStream = 1; //Tomorrow
 
         // maybe chance dayName
     }
