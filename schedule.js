@@ -77,7 +77,7 @@ case 0:{
     // Sun
 
    
-    //nextStreamDay = 1;
+    //nextStreamDay = 0;
     var daysTillNextStream = 1;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
