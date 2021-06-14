@@ -117,10 +117,10 @@ case 1:{
     const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
     //set the appropriate date for the next stream
     if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 1; //Today
+        daysTillNextStream = 0; //Today
     }
     else {
-        daysTillNextStream = 2; //Tomorrow
+        daysTillNextStream = 1; //Tomorrow
     }
 
     
@@ -254,7 +254,7 @@ function showTimeDiff(nextStream, dayNameParam){
         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
-        client.say(channel, `${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
+        client.say(channel, `${days} Days ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         // client.say(channel, `${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         // client.say(channel, nextStreamDay);
         client.say(channel, "NORMAL STREAMING HOURS ARE:");
