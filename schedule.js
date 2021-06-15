@@ -117,15 +117,23 @@ case 1:{
     const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
     //set the appropriate date for the next stream
     if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 0; //Today
+        daysTillNextStream = 1; //Today
     }
     else {
         daysTillNextStream = 1; //Tomorrow
     }
-
     
+    //start off with 1 and if it is after midnight, change daysTillNextStream to 0 and 
+
+
+
+
+
+
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   
+   console.log(nextStreamFormatted);
+   console.log(nextStreamFormatted);
+
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
@@ -144,7 +152,7 @@ case 2:{
         daysTillNextStream = 1; //Today
     }
     else {
-        daysTillNextStream = 2; //Tomorrow
+        daysTillNextStream = 1; //Tomorrow
     }
 
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
@@ -254,7 +262,7 @@ function showTimeDiff(nextStream, dayNameParam){
         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
-        client.say(channel, `${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
+        client.say(channel, `${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         // client.say(channel, `${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
         // client.say(channel, nextStreamDay);
         client.say(channel, "NORMAL STREAMING HOURS ARE:");
@@ -264,7 +272,7 @@ function showTimeDiff(nextStream, dayNameParam){
         //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
         console.log("------------------------------------")
         console.log("Next Stream will take place in:")
-        console.log(`${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
+        console.log(`${days} Day(s) ${hours + herokuTimeOffset} Hour(s) ${minutes} Mins ${seconds} Secs`);
         console.log(nextStreamDay);
         console.log("NORMAL STREAMING HOURS ARE:");
         console.log("Mon-Thurs 4:30 - 7:30 PM EST - except holidays")
