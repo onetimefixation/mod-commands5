@@ -149,7 +149,7 @@ case 2:{
     const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
     //set the appropriate date for the next stream
     if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 1; //Today
+        daysTillNextStream = 0; //Today
     }
     else {
         daysTillNextStream = 1; //Tomorrow
