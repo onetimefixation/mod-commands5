@@ -41,9 +41,9 @@ switch (parsedMessage[0].toLowerCase()){
   case '!startpoll':
     startpoll(client, tags, channel, parsedMessage[1]);
     break;
-  case '!schedule':
-    schedule(client, tags, channel, parsedMessage[1]);
-    break;
+  //case '!schedule':
+  //  schedule(client, tags, channel, parsedMessage[1]);
+  //  break;
   default:
     break;
   }
