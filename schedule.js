@@ -262,7 +262,7 @@ function showTimeDiff(nextStream, dayNameParam){
         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
-        if (days === 0 || days === 1){
+        if (days < 1 ){
             client.say(channel, `${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
            }
         else {
