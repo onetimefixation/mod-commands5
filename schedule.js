@@ -175,7 +175,7 @@ case 3:{
         daysTillNextStream = 0; //Today
     }
     else {
-        daysTillNextStream = 1; //Tomorrow
+        daysTillNextStream = 0; //Tomorrow
     }
 
 
