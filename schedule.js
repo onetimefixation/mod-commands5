@@ -141,7 +141,7 @@ case 1:{
 case 2:{
     // Tues
     //nextStreamDay = 3;
-    var daysTillNextStream = 1;
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
 
@@ -164,7 +164,7 @@ case 2:{
 case 3:{
     // Wed
     //nextStreamDay = 4;
-    var daysTillNextStream = 1;
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
     const nextDate = new Date();
 
