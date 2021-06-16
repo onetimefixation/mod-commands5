@@ -44,7 +44,7 @@ switch (parsedMessage[0].toLowerCase()){
   case '!schedule':
     schedule(client, tags, channel, parsedMessage[1]);
     break;
-  case '!qqq':
+  case '!a':
       schedule(client, tags, channel, parsedMessage[1]);
       break;
   default:
