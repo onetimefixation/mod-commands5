@@ -234,7 +234,7 @@ if (currentDateAndTime <= nextStreamDateAndTime){
     console.log("today")
     }
     else {
-        daysTillNextStream = 1;
+        daysTillNextStream = 3;
         nextStreamDateAndTime = new Date().getDate() + 1;
         //nextStreamDateAndTime = currentDateAndTime + 1;
         
@@ -263,7 +263,7 @@ if (currentDateAndTime <= nextStreamDateAndTime){
     console.log("today")
     }
     else {
-        daysTillNextStream = 1;
+        daysTillNextStream = 2;
         nextStreamDateAndTime = new Date().getDate() + 1;
         //nextStreamDateAndTime = currentDateAndTime + 1;
         
