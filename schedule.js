@@ -24,6 +24,14 @@ var seconds = new Date().getSeconds();
 var date = new Date().getDate(); 
 var nextStreamDay = 0;
 
+// globals to hold and calculate the compare dates
+
+const currentDateAndTime = new Date();
+var nextStreamDateAndTime = new Date("06/15/2021 17:47:00");
+
+
+
+
 const months = [
     'January',
     'February',
@@ -52,183 +60,221 @@ const months = [
 const monthName = months[mm];
 
 
-function  currentStreamStarted (countDownDate){
-        // Set the date we're counting down to
-        var countDownDate = new Date(countDownDate).getTime();
 
-        // Get today's date and time
-        var now = new Date().getTime();
+/* function currentStreamStarted (countDownDate){
+        var nowDate= new Date();
+        var nextStream = new Date(countDownDate);
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
-
-        if (distance < 0 ){
-            return (true);
-         }
-         else {
-             return (false);
-         }
-
-
-}
+        if (nowDate <= nextStream){
+        console.log("Streaam has not yet started")
+        return(false);
+        }
+        else {
+        console.log("Streaam has started")
+        return(true);
+        }
+} */
 
 switch (day){
 case 0:{ 
     // Sun
 
-   
-    //nextStreamDay = 0;
-    var daysTillNextStream = 1;
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
-
-
-
-
-
-
-    //first format the argument that is sent to calculate if the stream has started
-    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-    //set the appropriate date for the next stream
-    if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 0; //Today
-        // maybe chance dayName
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
     }
     else {
-        daysTillNextStream = 1; //Tomorrow
-
-        // maybe chance dayName
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
+    
     }
-
-        const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-
+    // the date variable by itself is todays's date
+    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
 }
 case 1:{
     // Mon
-    //nextStreamDay = 2;
-    var daysTillNextStream = 1;
+    
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
-
-    //first format the argument that is sent to calculate if the stream has started
-    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-    //set the appropriate date for the next stream
-    if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 1; //Today
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
     }
     else {
-        daysTillNextStream = 1; //Tomorrow
-    }
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
     
-    //start off with 1 and if it is after midnight, change daysTillNextStream to 0 and 
-
-
-
-
-
-
+    }
+    // the date variable by itself is todays's date
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   console.log(nextStreamFormatted);
-   console.log(nextStreamFormatted);
-
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
 }
 case 2:{
     // Tues
-    //nextStreamDay = 3;
+
     var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
-
-    //first format the argument that is sent to calculate if the stream has started
-    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-    //set the appropriate date for the next stream
-    if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 1; //Today
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
     }
     else {
-        daysTillNextStream = 1; //Tomorrow
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
+    
     }
-
+    // the date variable by itself is todays's date
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
 }
 case 3:{
     // Wed
-    //nextStreamDay = 4;
+    //
     var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
-
-    //first format the argument that is sent to calculate if the stream has started
-    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-    //set the appropriate date for the next stream
-    if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 0; //Today
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
     }
     else {
-        daysTillNextStream = 0; //Tomorrow
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
+    
     }
-
-
-
+    // the date variable by itself is todays's date
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
 }
 case 4:{
     // Thurs
-    //nextStreamDay = 1;
-    var daysTillNextStream = 4;
+    //
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
-
-    //first format the argument that is sent to calculate if the stream has started
-    const countDownDateArg = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-    //set the appropriate date for the next stream
-    if (!currentStreamStarted(countDownDateArg)){
-        daysTillNextStream = 1; //Today
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
     }
     else {
-        daysTillNextStream = 4; //Tomorrow
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
+    
     }
-
-
+    // the date variable by itself is todays's date
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
+
     break;
 }
 case 5:{
     // Fri
     //nextStreamDay = 1;
-    var daysTillNextStream = 3;
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
+    }
+    else {
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
+    
+    }
+    // the date variable by itself is todays's date
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
+
     break;
 }
 case 6:{
     // Sat
     
-    //nextStreamDay = 1;
-    var daysTillNextStream = 2;
+    var daysTillNextStream = 0;
     const dayName = days[nextStreamDay];
-    const nextDate = new Date();
+    
+if (currentDateAndTime <= nextStreamDateAndTime){
+        daysTillNextStream = 0; 
+        nextStreamDateAndTime = new Date().getDate() + 1;
+       // nextStreamDateAndTime = currentDateAndTime;
+    console.log("today")
+    }
+    else {
+        daysTillNextStream = 1;
+        nextStreamDateAndTime = new Date().getDate() + 1;
+        //nextStreamDateAndTime = currentDateAndTime + 1;
+        
+    console.log("tomorrow")
+    
+    }
+    // the date variable by itself is todays's date
     const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
-   
+    // new code
+    //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
+    
     showTimeDiff(nextStreamFormatted, dayName);
 
     break;
@@ -243,6 +289,9 @@ until the logic is worked out */
 
 
 function showTimeDiff(nextStream, dayNameParam){
+
+    console.log(`next streaam = ${nextStream}`)
+
         // Set the date we're counting down to
         var countDownDate = new Date(nextStream).getTime();
         const herokuTimeOffset = 4;
@@ -262,7 +311,7 @@ function showTimeDiff(nextStream, dayNameParam){
         const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
         client.say(channel, "------------------------------------");
         client.say(channel, "NEXT STREAM TAKES PLACE IN:")
-        if (days < 1 ){
+        if (days <= 1 ){
             client.say(channel, `${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
            }
         else {
@@ -277,7 +326,7 @@ function showTimeDiff(nextStream, dayNameParam){
 
         //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
         console.log("------------------------------------")
-        console.log("Next Stream will take place in:")
+        console.log("Next Stream will start in:")
         console.log(`${days} Day(s) ${hours + herokuTimeOffset} Hour(s) ${minutes} Mins ${seconds} Secs`);
         console.log(nextStreamDay);
         console.log("NORMAL STREAMING HOURS ARE:");
