@@ -242,7 +242,7 @@ if (currentDateAndTime <= nextStreamDateAndTime){
     
     }
     // the date variable by itself is todays's date
-    const nextStreamFormatted = `${monthName} ${date + daysTillNextStream}, 2021 16:30:00`;
+    const nextStreamFormatted = `${monthName} ${date}, 2021 16:30:00`;
     // new code
     //const nextStreamFormatted = `${monthName} ${nextStreamDateAndTime}, 2021 16:30:00`;
     
@@ -294,7 +294,7 @@ function showTimeDiff(nextStream, dayNameParam){
 
         // Set the date we're counting down to
         var countDownDate = new Date(nextStream).getTime();
-        const herokuTimeOffset = 4;
+        const herokuTimeOffset = 0;
         // Get today's date and time
         var now = new Date().getTime();
 
@@ -319,7 +319,7 @@ function showTimeDiff(nextStream, dayNameParam){
         }
 
         // client.say(channel, `${days} Day(s) ${hours + herokuTimeOffset} Hours ${minutes} Mins ${seconds} Secs`);
-        // client.say(channel, nextStreamDay);
+      //  client.say(channel, nextStreamDay);
         client.say(channel, "NORMAL STREAMING HOURS ARE:");
         client.say(channel, "Mon-Thurs 4:30 - 7:30 PM EST - except holidays");
         client.say(channel, "------------------------------------"); 
