@@ -265,7 +265,7 @@ export function schedule(client, tags, channel, predictionTime){
     
             // Output the result        
             //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
-            client.say(channel, `${theNextStream}`)
+            //client.say(channel, `${theNextStream}`)
             client.say(channel, "---------------------------");
             client.say(channel, "NEXT STREAM IN:")
             client.say(channel, `${days} Day(s) ${hours} Hours ${minutes} Mins`);
