@@ -35,11 +35,10 @@ export function startpred(client, tags, channel, predictionTime){
            var elapsed_time = 0;
            var timeLeft = predict_time;
    
-
-           client.say(channel, `PREDICTION VOTING`);
-           client.say(channel, `     STARTED`);
-           client.say(channel, `* ${predictionTime} MIN(S) LEFT *`);
-          // client.say(channel, `******************`);
+           client.say(channel, `]|I{•------» -- «------•}I|[`);
+           client.say(channel, `/me PREDICTION VOTING`);
+           client.say(channel, `/me      STARTED`);
+           client.say(channel, `/me * ${predictionTime} MIN(S) LEFT *`);
    
    
            for (let i = 0; i < numberIterations; i++) {
@@ -62,16 +61,16 @@ export function startpred(client, tags, channel, predictionTime){
                    strOutput.push(+strTimeLeft.charAt(i));
                }
 
-                client.say(channel,`PREDICTION VOTING`);
-                //client.say(channel,`**  V O T I N G  **`);
+                client.say(channel,`/me PREDICTION VOTING`);
                
                
                if (strOutput[0] && strOutput[1] !== 1){
-                   client.say(channel,`** ${strOutput[0]}${strOutput[1]} SECS LEFT ***`);
+                   client.say(channel,`/me ** ${strOutput[0]}${strOutput[1]} SECS LEFT ***`);
                    }
                  else {
                    if (timeLeft <= 0) {
-                      client.say(channel,`**** ENDED ******`); 
+                      client.say(channel, `/me **** ENDED ******`); 
+                      client.say(channel, `]|I{•------» -- «------•}I|[`);
                    }
                    
                  }  

@@ -20,7 +20,7 @@ export function schedule(client, tags, channel, predictionTime){
     var nextStreamDateAndTime = new Date("06/15/2021 16:30:00");
 
     
-    const months = [
+    const arrMonths = [
         'January',
         'February',
         'March',
@@ -35,7 +35,7 @@ export function schedule(client, tags, channel, predictionTime){
         'December'
       ]
     
-      const days = [
+      const arrDays = [
         'Sun',
         'Mon',
         'Tues',
@@ -45,7 +45,7 @@ export function schedule(client, tags, channel, predictionTime){
         'Sat'
       ]
     
-    const monthName = months[mm];
+    const monthName = arrMonths[mm];
     
 
     
@@ -53,7 +53,7 @@ export function schedule(client, tags, channel, predictionTime){
     case 0:{ 
         // Sun
     
-    const dayName = days[nextStreamDay];
+    //const dayName = days[nextStreamDay];
         
     if (currentDateAndTime <= nextStreamDateAndTime){
            var daysTillNextStream = 0; 
@@ -80,7 +80,7 @@ export function schedule(client, tags, channel, predictionTime){
     case 1:{
         // Mon
         
-        const dayName = days[nextStreamDay];
+        //const dayName = days[nextStreamDay];
         
     if (currentDateAndTime <= nextStreamDateAndTime){
            var daysTillNextStream = 0; 
@@ -106,7 +106,7 @@ export function schedule(client, tags, channel, predictionTime){
     }
     case 2:{
         // Tues
-        const dayName = days[nextStreamDay];
+        //const dayName = days[nextStreamDay];
         
         if (currentDateAndTime <= nextStreamDateAndTime){
                var daysTillNextStream = 0; 
@@ -133,7 +133,7 @@ export function schedule(client, tags, channel, predictionTime){
     case 3:{
         // Wed
 
-        const dayName = days[nextStreamDay];
+        //const dayName = days[nextStreamDay];
         
     if (currentDateAndTime <= nextStreamDateAndTime){
            var daysTillNextStream = 0; 
@@ -160,7 +160,7 @@ export function schedule(client, tags, channel, predictionTime){
     case 4:{
         // Thurs
 
-        const dayName = days[nextStreamDay];
+        //const dayName = days[nextStreamDay];
         
     if (currentDateAndTime <= nextStreamDateAndTime){
            var daysTillNextStream = 0; 
@@ -187,7 +187,7 @@ export function schedule(client, tags, channel, predictionTime){
     case 5:{
         // Fri
 
-        const dayName = days[nextStreamDay];
+        //const dayName = days[nextStreamDay];
         
     if (currentDateAndTime <= nextStreamDateAndTime){
            var daysTillNextStream = 0; 
@@ -214,7 +214,7 @@ export function schedule(client, tags, channel, predictionTime){
     case 6:{
         // Sat
         
-        const dayName = days[nextStreamDay];
+        //const dayName = days[nextStreamDay];
         
     if (currentDateAndTime <= nextStreamDateAndTime){
            var daysTillNextStream = 0; 
@@ -246,6 +246,13 @@ export function schedule(client, tags, channel, predictionTime){
     
     function showTimeDiff(nextStream){
      
+        var nextStreamNow = new Date(nextStream).getTime();
+        var nextStreamMonth = new Date(nextStream).getMonth();
+        var nextStreamDay = new Date(nextStream).getDay();
+        var nextStreamHour = new Date(nextStream).getHours();
+        var nextStreamMinutes = new Date(nextStream).getMinutes(); 
+        var nextStreamDate = new Date(nextStream).getDate(); 
+
         var today = new Date();
         var theNextStream = new Date( nextStream );
         var res = Math.abs(theNextStream - today) / 1000;
@@ -262,23 +269,28 @@ export function schedule(client, tags, channel, predictionTime){
         // get seconds
         // var seconds = res % 60;
 
-    
             // Output the result        
             //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4:30 PM EST`;
             //client.say(channel, `${theNextStream}`)
-            client.say(channel, "---------------------------");
-            client.say(channel, "NEXT STREAM IN:")
-            client.say(channel, `${days} Day(s) ${hours} Hours ${minutes} Mins`);
-            client.say(channel, "NORMAL STREAMING HRS:");
-            client.say(channel, "Mon-Thurs 4:30 - 7:30 PM EST");
-            client.say(channel, " - except holidays");
-            client.say(channel, "---------------------------"); 
+            client.say(channel, "░▒▓█►─══─◄█▓▒░");
+            client.say(channel, "/me NEXT STREAM IN:")
+            if (days <= 1){
+                client.say(channel, `/me ${hours} Hours ${minutes} Mins`);
+            }
+            else{
+                client.say(channel, `/me ${days} Day(s) ${hours} Hours ${minutes} Mins`);
+            }
+            client.say(channel, `/me ${arrDays[nextStreamDay]} ${arrMonths[nextStreamMonth]} ${nextStreamDate} 4:30 PM EST`);
+            client.say(channel, "/me NORMAL STREAMING HRS:");
+            client.say(channel, "/me Mon-Thurs 4:30 - 7:30 PM EST");
+            client.say(channel, "/me  - except holidays");
+            client.say(channel, "░▒▓█►─══─◄█▓▒░"); 
     
             //const nextStreamDay = `${dayNameParam} ${monthName} ${date + 2}, 2021 4 PM EST`;
             console.log("------------------------------------")
             console.log("Next Stream will start in:")
             console.log(`${days} Day(s) ${hours} Hour(s) ${minutes} Mins ${seconds} Secs`);
-            console.log(nextStreamDay);
+            console.log(theNextStream);
             console.log("NORMAL STREAMING HOURS ARE:");
             console.log("Mon-Thurs 4:30 - 7:30 PM EST - except holidays")
             console.log("------------------------------------") 
