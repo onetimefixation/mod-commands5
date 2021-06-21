@@ -280,7 +280,7 @@ export function schedule(client, tags, channel, predictionTime){
             else{
                 client.say(channel, `/me ${days} Day(s) ${hours} Hours ${minutes} Mins`);
             }
-            client.say(channel, `/me ${arrDays[nextStreamDay]} ${arrMonths[nextStreamMonth]} ${nextStreamDate} 4:30 PM EST`);
+            //client.say(channel, `/me ${arrDays[nextStreamDay]} ${arrMonths[nextStreamMonth]} ${nextStreamDate} 4:30 PM EST`);
             client.say(channel, "/me NORMAL STREAMING HRS:");
             client.say(channel, "/me Mon-Thurs 4:30 - 7:30 PM EST");
             client.say(channel, "/me  - except holidays");
