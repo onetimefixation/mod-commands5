@@ -18,26 +18,14 @@ import tmi from 'tmi.js';
 
 dotenv.config();
 
-/* const client = new tmi.Client({
+ const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
+    username: process.env.BOT_USERNAME,
 		password: process.env.OAUTH_TOKEN
 	},
 	channels: [ process.env.CHANNEL_NAME ]
-}); */
-
-const client = new tmi.Client({
-	options: { debug: true },
-	identity: {
-    username: 'Melon_Boto',
-		password: 'oauth:z8z6k5k6vsr9d0qnlhaorkft48v4up'
-	},
-	channels: [ 'rinoapoison' ]
-});
-
-console.log (process.env.OAUTH_TOKEN)
-
-console.log (process.env.CHANNEL_NAME)
+}); 
 
 client.connect();
 
