@@ -37,7 +37,7 @@ export function startpoll(client, tags, channel, predictionTime){
            var timeLeft = predict_time;
    
 
-           client.say(channel, `]|I{•------» -- «------•}I|[`);
+           client.say(channel, `]|I{•_________________•}I|[`);
            client.say(channel, `/me * POLL STARTED *`);
            client.say(channel, `/me * ${predictionTime} MIN(S) LEFT *`);
    
@@ -72,7 +72,7 @@ export function startpoll(client, tags, channel, predictionTime){
                  else {
                    if (timeLeft <= 0) {
                       client.say(channel,`/me **** ENDED ******`);
-                      client.say(channel, `]|I{•------» -- «------•}I|[`);
+                      client.say(channel, `]|I{•___________________•}I|[`);
                    }
                    
                  }  

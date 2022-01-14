@@ -11,6 +11,8 @@
 import dotenv from 'dotenv';
 import {startpred} from './predtimer.js';
 import {startpoll} from './predpoll.js';
+import {visit} from './visit.js';
+import {laugh} from './laugh.js';
 import {schedule} from './schedule.js';
 import tmi from 'tmi.js';
 
@@ -19,7 +21,6 @@ dotenv.config();
 const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
-		username: process.env.BOT_USERNAME,
 		password: process.env.OAUTH_TOKEN
 	},
 	channels: [ process.env.CHANNEL_NAME ]
@@ -41,6 +42,12 @@ switch (parsedMessage[0].toLowerCase()){
   case '!startpoll':
     startpoll(client, tags, channel, parsedMessage[1]);
     break;
+  case '!visit':
+    visit(client, tags, channel, parsedMessage[1]);
+    break;
+  case '!laugh':
+    laugh (client, tags, channel, parsedMessage[1]);
+      break;
   //case '!schedule':
   //  schedule(client, tags, channel, parsedMessage[1]);
   //  break;

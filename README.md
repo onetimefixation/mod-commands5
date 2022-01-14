@@ -1,4 +1,54 @@
-# Special MOD Commands
+
+# Emote Meter
+Used by viewers to spam emotes in chat
+When the chat reaches a certain threshold, this will trigger a "!boom" command
+This command spams a predefined overlay with emotes
+
+The emote configuration is controled by the xxxxxxx feature of Stream Elements
+
+
+## Installing to Stream Elements and OBS
+
+from: https://www.youtube.com/watch?v=XWwUMxYgbtE
+
+1) Stream Elements
+    2) Chat Commands
+        kappagen / boom
+    3) My Overlays
+        new
+        Position, size and style
+            ?????
+            Center Widget
+            SAVE
+        EMOTESPLOSIONS
+        SELECT EMOTES
+            SAVE
+
+     4) Copy URL (on top right (chain))
+
+
+## Changes to OBS
+    Create New Source - BROWSER
+    Name it
+    Paste the copied URL
+    Change WIDTH and HEIGHT to ???????????????
+
+
+
+
+## Built With
+
+index.html
+styles.css
+emote_meter.js
+package.json
+tmi.min.js 
+
+
+###############################################################
+#                                                             #
+#                       Special MOD Commands                  #
+#                                                             #
 These commands are developed for a targetted Twitch site.  It is meant to assist in moderating CHAT, as well as making CHAT more engaging to the visitors.
 Anyone using this code assumes full responsibility for its behavior and outcomes.
 
