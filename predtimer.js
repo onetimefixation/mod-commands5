@@ -35,7 +35,7 @@ export function startpred(client, tags, channel, predictionTime){
            var elapsed_time = 0;
            var timeLeft = predict_time;
    
-           client.say(channel, `]|I{•------» -- «------•}I|[`);
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄`);
            client.say(channel, `/me PREDICTION VOTING`);
            client.say(channel, `/me      STARTED`);
            client.say(channel, `/me * ${predictionTime} MIN(S) LEFT *`);
@@ -70,7 +70,7 @@ export function startpred(client, tags, channel, predictionTime){
                  else {
                    if (timeLeft <= 0) {
                       client.say(channel, `/me **** ENDED ******`); 
-                      client.say(channel, `]|I{•------» -- «------•}I|[`);
+                      client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄`);
                    }
                    
                  }  

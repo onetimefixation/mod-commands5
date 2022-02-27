@@ -1,7 +1,0 @@
-!schedule command
-There is an easy way to create a !schedule command for chat 
-In STREAMELEMENTS  do this:
-1) On the left hand side under BOT hit CHAT COMMANDS 
-2) On the third line click CUSTOM COMMANDS 
-3) Click the ADD NEW COMMAND and fill in the form 
-P

@@ -56,27 +56,3 @@ switch (parsedMessage[0].toLowerCase()){
     break;
   }
 });
-
-/*
-{
-    'badge-info': null,
-    badges: { broadcaster: '1', premium: '1' },
-    'client-nonce': 'xxxxxxxxxxxxxxxxxxx',
-    color: '#FF0505',
-    'display-name': 'xxxxxxxxxxxxxxx',
-    emotes: null,
-    flags: null,
-    id: 'xxxxxxxxxxxxx',
-    mod: false,
-    'room-id': 'xxxxxxxxxx',
-    subscriber: false,
-    'tmi-sent-ts': 'xxxxxxxxxxx',
-    turbo: false,
-    'user-id': 'xxxxxxxxxxxxx',
-    'user-type': null,
-    'emotes-raw': null,
-    'badge-info-raw': null,
-    'badges-raw': 'broadcaster/1,premium/1',
-    username: 'xxxxxxxxxxxx',
-    'message-type': 'chat'
-  } */
