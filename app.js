@@ -1,5 +1,6 @@
 // VERSION
 // Added !startpoll 060321
+// Added !startmatch 071922
 
 
 //    REQUIRES DO NOT WORK BECAUSE THE JASON TYPE IS MODULE 
@@ -11,12 +12,24 @@
 import dotenv from 'dotenv';
 import {startpred} from './predtimer.js';
 import {startpoll} from './predpoll.js';
+import {startmatchtimer} from './startmatchtimer.js';
 import {visit} from './visit.js';
 import {laugh} from './laugh.js';
 import {schedule} from './schedule.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
+/*
+ const client = new tmi.Client({
+	options: { debug: true },
+	identity: {
+    username: process.env.RP_BOT_USERNAME,
+		password: process.env.RP_OAUTH_TOKEN
+	},
+	channels: [ process.env.RP_CHANNEL_NAME ]
+}); 
+*/
+
 
  const client = new tmi.Client({
 	options: { debug: true },
@@ -26,6 +39,7 @@ dotenv.config();
 	},
 	channels: [ process.env.CHANNEL_NAME ]
 }); 
+
 
 client.connect();
 
@@ -43,6 +57,9 @@ switch (parsedMessage[0].toLowerCase()){
   case '!startpoll':
     startpoll(client, tags, channel, parsedMessage[1]);
     break;
+  case '!startmatchtimer':
+      startmatchtimer(client, tags, channel, parsedMessage[1]);
+      break;
   case '!visit':
     visit(client, tags, channel, parsedMessage[1]);
     break;
