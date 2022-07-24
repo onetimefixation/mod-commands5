@@ -36,14 +36,24 @@ export function startmatchtimer(client, tags, channel, predictionTime){
     
            var elapsed_time = 0;
            var timeLeft = predict_time;
-   
-           //client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄`);
-           client.say (channel, `▀▄▀▄▀▄ SUBS WILL BE MATCHED FOR THE NEXT ${predictionTime} MINUTE(S) ▀▄▀▄▀▄`);
-           //client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄ Subs will be matched for the next ${predictionTime} minute(s) ▀▄▀▄▀▄▀▄▀▄▀▄`);
-           //client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄`);
-           //client.say(channel, `/me * ${predictionTime} MIN(S) LEFT *`);
-   
-   
+   /*
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+           client.say(channel, `[*__SUBS_WILL_BE_*]`);
+           client.say(channel, `[*_MATCHED__FOR_*]`);
+           client.say(channel, `[*____THE_NEXT____*]`);
+           client.say(channel, `[*___${predictionTime} MINUTE(S)___*]`);
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+   */
+
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+           client.say(channel, `[*__SUBS__TO_THIS_*]`);
+           client.say(channel, `[*_STREAM_WILL_BE_*]`);
+           client.say(channel, `[*__MATCHED__FOR__*]`);
+           client.say(channel, `[*____THE_NEXT____*]`);
+           client.say(channel, `[*___${predictionTime} MINUTE(S)___*]`);
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+
+
            for (let i = 0; i < numberIterations; i++) {
              makeDelay(i);
            }
@@ -64,16 +74,16 @@ export function startmatchtimer(client, tags, channel, predictionTime){
                    strOutput.push(+strTimeLeft.charAt(i));
                }
 
-                client.say(channel,`▀▄▀▄▀▄ Sub Matching ▀▄▀▄▀▄`);
-               
+                client.say(channel,`[*_Sub Matching_*]`);
                
                if (strOutput[0] && strOutput[1] !== 1){
-                   client.say(channel,`▀▄▀▄▀▄ ${strOutput[0]}${strOutput[1]} SECS LEFT ▀▄▀▄▀▄`);
+                   client.say(channel,`*${strOutput[0]}${strOutput[1]} SECS LEFT_*]`);
+                   client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀`);
                    }
                  else {
                    if (timeLeft <= 0) {
-                      client.say(channel, `▀▄▀▄▀▄  SUB MATCHING ENDED ▀▄▀▄▀▄`); 
-                    //  client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄`);
+                      client.say(channel, `[*SUB MATCHING ENDED*]`);
+                      client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
                    }
                    
                  }  

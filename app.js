@@ -19,16 +19,6 @@ import {schedule} from './schedule.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
-/*
- const client = new tmi.Client({
-	options: { debug: true },
-	identity: {
-    username: process.env.RP_BOT_USERNAME,
-		password: process.env.RP_OAUTH_TOKEN
-	},
-	channels: [ process.env.RP_CHANNEL_NAME ]
-}); 
-*/
 
 
  const client = new tmi.Client({
@@ -39,7 +29,6 @@ dotenv.config();
 	},
 	channels: [ process.env.CHANNEL_NAME ]
 }); 
-
 
 client.connect();
 
@@ -57,7 +46,7 @@ switch (parsedMessage[0].toLowerCase()){
   case '!startpoll':
     startpoll(client, tags, channel, parsedMessage[1]);
     break;
-  case '!startmatchtimer':
+  case '!startmatch':
       startmatchtimer(client, tags, channel, parsedMessage[1]);
       break;
   case '!visit':
