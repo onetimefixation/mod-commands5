@@ -55,7 +55,7 @@ export function startmatchtimer(client, tags, channel, predictionTime){
            client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
    */
 
-           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄ rinoaDance PogChamp`);
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
            client.say(channel, `[*__SUBS__TO_THIS_*]`);
            client.say(channel, `[*_STREAM_WILL_BE_*]`);
            client.say(channel, `[*__MATCHED__FOR__*]`);
