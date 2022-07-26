@@ -7,11 +7,21 @@ export function startmatchtimer(client, tags, channel, predictionTime){
 //console.log(tags);
 
     // only accept messages from valid people
-    if (tags.mod !== true) {
+ /*   if (tags.mod !== true) {
            return;
-        }    
+        }    */
         
-
+        var validUser;
+      
+          if (tags.badges && (tags.badges.broadcaster || tags.badges.moderator)){
+           validUser = 1;
+            }
+          else {
+          validUser = 0;
+          }
+          if (!validUser){
+          return;
+          }
 
        //if the time is not passed or is not numeric then RETURN
    
@@ -45,7 +55,7 @@ export function startmatchtimer(client, tags, channel, predictionTime){
            client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
    */
 
-           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄ rinoaDance PogChamp`);
            client.say(channel, `[*__SUBS__TO_THIS_*]`);
            client.say(channel, `[*_STREAM_WILL_BE_*]`);
            client.say(channel, `[*__MATCHED__FOR__*]`);

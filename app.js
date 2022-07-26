@@ -20,7 +20,7 @@ import tmi from 'tmi.js';
 
 dotenv.config();
 
-
+/*
  const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
@@ -29,6 +29,27 @@ dotenv.config();
 	},
 	channels: [ process.env.CHANNEL_NAME ]
 }); 
+
+*/
+
+
+//*********************  Goes Here ****************/
+const client = new tmi.Client({
+	options: { debug: true, messagesLogLevel: 'info' },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'Melon_Boto',
+		password: 'oauth:z8z6k5k6vsr9d0qnlhaorkft48v4up'
+	},
+	channels: [ '#astro_charles' ]
+});
+//*********************  Ends Here ****************/
+
+
+
 
 client.connect();
 
