@@ -15,20 +15,20 @@ import {startpoll} from './predpoll.js';
 import {startmatchtimer} from './startmatchtimer.js';
 import {visit} from './visit.js';
 import {laugh} from './laugh.js';
+import {antidote} from './antidote.js';
 import {schedule} from './schedule.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
 
-
  const client = new tmi.Client({
-	options: { debug: true },
+ options: { debug: true },
 	identity: {
     username: process.env.BOT_USERNAME,
 		password: process.env.OAUTH_TOKEN
 	},
 	channels: [ process.env.CHANNEL_NAME ]
-}); 
+});
 
 
 client.connect();
@@ -56,6 +56,10 @@ switch (parsedMessage[0].toLowerCase()){
   case '!laugh':
     laugh (client, tags, channel, parsedMessage[1]);
       break;
+  case '!antidote':
+    antidote (client, tags, channel, parsedMessage[1]);
+      break;      
+
   //case '!schedule':
   //  schedule(client, tags, channel, parsedMessage[1]);
   //  break;
