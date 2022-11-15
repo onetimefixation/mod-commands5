@@ -20,7 +20,6 @@ export function html(client, tags, channel, noParam){
           return;
           }
 
-           client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
            client.say(channel, `Rinoa has a browser add-in that replaces words on forms. The scammers can see it, but they generally don't catch on.`);
            client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
 
