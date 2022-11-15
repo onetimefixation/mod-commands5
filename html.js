@@ -21,12 +21,7 @@ export function html(client, tags, channel, noParam){
           }
 
            client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
-           client.say(channel, `Rinoa has a browser*`);
-           client.say(channel, `add-in that replaces`);
-           client.say(channel, `words on forms.`);
-           client.say(channel, `The scammers can see`);
-           client.say(channel, `it, but they generally`);
-           client.say(channel, `don't catch on.`);
+           client.say(channel, `Rinoa has a browser add-in that replaces words on forms. The scammers can see it, but they generally don't catch on.`;
            client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
 
                 
