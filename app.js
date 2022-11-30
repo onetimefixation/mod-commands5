@@ -19,6 +19,7 @@ import {laugh} from './laugh.js';
 import {antidote} from './antidote.js';
 import {schedule} from './schedule.js';
 import {html} from './html.js';
+import {patreon} from './patreon.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
@@ -64,7 +65,9 @@ switch (parsedMessage[0].toLowerCase()){
   case '!html':
     html (client, tags, channel, parsedMessage[1]);
       break; 
-
+  case '!patreon':
+    html (client, tags, channel, parsedMessage[1]);
+          break; 
   default:
     break;
   }
