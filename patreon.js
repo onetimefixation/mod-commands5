@@ -2,7 +2,7 @@
 // VERSION 1.1
 
 
-export function html(client, tags, channel, noParam){
+export function patreon(client, tags, channel, noParam){
 
     //console.log(tags);
     
