@@ -66,7 +66,7 @@ switch (parsedMessage[0].toLowerCase()){
     html (client, tags, channel, parsedMessage[1]);
       break; 
   case '!patreon':
-    html (client, tags, channel, parsedMessage[1]);
+    patreon (client, tags, channel, parsedMessage[1]);
           break; 
   default:
     break;
