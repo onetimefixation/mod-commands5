@@ -2,6 +2,7 @@
 // Added !startpoll 060321
 // Added !startmatch 071922
 // Added !html 11/11/22
+// Added !gift 12/13/22
 
 
 //    REQUIRES DO NOT WORK BECAUSE THE JASON TYPE IS MODULE 
@@ -20,6 +21,7 @@ import {antidote} from './antidote.js';
 import {schedule} from './schedule.js';
 import {html} from './html.js';
 import {patreon} from './patreon.js';
+import {patreon} from './gift.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
@@ -67,7 +69,10 @@ switch (parsedMessage[0].toLowerCase()){
       break; 
   case '!patreon':
     patreon (client, tags, channel, parsedMessage[1]);
-          break; 
+          break;
+  case '!gift':
+    gift (client, tags, channel, parsedMessage[1]);
+       break;
   default:
     break;
   }
