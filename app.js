@@ -21,7 +21,7 @@ import {antidote} from './antidote.js';
 import {schedule} from './schedule.js';
 import {html} from './html.js';
 import {patreon} from './patreon.js';
-import {patreon} from './gift.js';
+import {gift} from './gift.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
