@@ -18,9 +18,9 @@ export function gift(client, tags, channel, noParam){
               if (!validUser){
               return;
               }
-    
-               client.say(channel, `If you'd like to gift merch to someone in the live Twitch chat, please go to http://rinoapoison-shop.fourthwall.com/ choose a gift and hit the GIFT option... Happy Holidays.`)
-               client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+              client.say(channel, `___________________`);
+               client.say(channel, `If you'd like to gift merch to someone in the live Twitch chat, please go to https://merch.rinoapoison.com/ choose a gift and hit the GIFT option... Happy Holidays.`)
+               client.say(channel, `__________________`);
 
       //     }
        
