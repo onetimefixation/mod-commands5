@@ -19,7 +19,7 @@ export function gift(client, tags, channel, noParam){
               return;
               }
               client.say(channel, `__________________________`);
-               client.say(channel, `If you'd like to gift merch to someone in the live Twitch chat, please go to https://merch.rinoapoison.com/ choose a gift and hit the GIFT option... Happy Holidays.`)
+               client.say(channel, `If you'd like to gift merch to someone in the live Twitch chat, please go to https://merch.rinoapoison.com/ choose a gift and hit the GIFT option`)
                client.say(channel, `_________________________`);
 
       //     }
