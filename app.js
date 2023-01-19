@@ -23,6 +23,7 @@ import {html} from './html.js';
 import {patreon} from './patreon.js';
 import {gift} from './gift.js';
 import {learn} from './learn.js';
+import {phone} from './phone.js';
 import tmi from 'tmi.js';
 
 dotenv.config();
@@ -77,6 +78,9 @@ switch (parsedMessage[0].toLowerCase()){
   case '!learn':
     learn (client, tags, channel, parsedMessage[1]);
       break;
+  case '!phone':
+    phone (client, tags, channel, parsedMessage[1]);
+          break;
   default:
     break;
   }

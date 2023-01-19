@@ -19,9 +19,9 @@ export function patreon(client, tags, channel, noParam){
               if (!validUser){
               return;
               }
-    
+               client.say(channel, `____________________`);
                client.say(channel, `Join our Patreon for exclusive content and support the channel ► https://www.patreon.com/rinoapoison`)
-               client.say(channel, `▀▄▀▄▀▄▀▄▀▄▀▄▀▄`);
+               client.say(channel, `____________________`);
 
       //     }
        
