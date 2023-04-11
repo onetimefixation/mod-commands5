@@ -85,6 +85,9 @@ switch (parsedMessage[0].toLowerCase()){
   case '!phone':
     phone (client, tags, channel, parsedMessage[1]);
           break;
+  case '!techhelp':
+    techhelp (client, tags, channel, parsedMessage[1]);
+          break;
   default:
     break;
   }
